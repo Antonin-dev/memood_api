@@ -34,6 +34,16 @@ class Category
         $this->memes = new ArrayCollection();
     }
 
+    /**
+     * return string for easy admin
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
