@@ -1,0 +1,81 @@
+*, ::after, ::after{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-content{
+    height: 100vh;
+    width: 100vw;
+    background: url('/assets/picture/home-cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Pattaya', sans-serif;
+    opacity: 0.8;
+}
+
+.main-content h1{
+    font-size: 3.2em;
+    text-align: center;
+    height: 10%;
+ 
+}
+
+.main-content .button-content{
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .button-content p{
+    font-size: 1.9em;
+    color: whitesmoke;
+}
+
+.main-content .button-content a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+    padding: 10px 65px;
+    background-color: #2a9d8f;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.main-content .content{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    
+}
+
+.main-content .content .item {
+    width: 40%;
+    background-color: #caffbf;
+    opacity: 0.7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-content .content .item h2,p{
+    text-align: center;
+}
+
+.main-content .content .bas{
+    margin-top: 10px
+}
+
+.item a{
+    margin: auto;
+}
+

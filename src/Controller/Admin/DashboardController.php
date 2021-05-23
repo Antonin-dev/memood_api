@@ -23,13 +23,13 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Mimood Api');
+            ->setTitle('Memood Api');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Meme', 'fas fa-list', Meme::class);
+        yield MenuItem::linkToCrud('Meme', 'fab fa-meetup', Meme::class);
         yield MenuItem::linkToCrud('Category', 'fas fa-list', Category::class);
     }
 }

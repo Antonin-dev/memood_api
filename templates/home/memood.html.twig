@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Memood-Api{% endblock %}
+
+{% block body %}
+
+<div class="main-content">
+    <h1>Memood-Api</h1>
+    <div class="content">
+        <div class="item">
+            <h2>Memood-Api All</h2>
+            <p>Attention ! Vous allez récupérer des données au format json.</p>
+            <a href="{{ app.request.server.get('PICTURE_URL') }}all">{{ app.request.server.get('PICTURE_URL') }}all</a>
+            <pre><code class="lang-json">
+        {
+        <span class="hljs-string">"error"</span>:<span class="hljs-literal">null</span> || string,
+        <span class="hljs-string">"message"</span>:<span class="hljs-literal">null</span> || string,
+        <span class="hljs-string">"meme"</span>:[
+            {
+                <span class="hljs-string">"name"</span>: string,
+                <span class="hljs-string">"slug"</span>: string,
+                <span class="hljs-string">"history"</span>: timestamp
+                <span class="hljs-string">"picture"</span>: string
+            }
+        ]
+        }
+        </code></pre>
+    </div>
+    <div class="item">
+        <h2>Memood-Api Random</h2>
+        <p>Attention ! Vous allez récupérer des données au format json.</p>
+        <a href="{{ app.request.server.get('PICTURE_URL') }}random">{{ app.request.server.get('PICTURE_URL') }}random</a>
+        <pre><code class="lang-json">
+        {
+        <span class="hljs-string">"error"</span>:<span class="hljs-literal">null</span> || string,
+        <span class="hljs-string">"message"</span>:<span class="hljs-literal">null</span> || string,
+        <span class="hljs-string">"meme"</span>:[
+            {
+                <span class="hljs-string">"name"</span>: string,
+                <span class="hljs-string">"slug"</span>: string,
+                <span class="hljs-string">"history"</span>: timestamp
+                <span class="hljs-string">"picture"</span>: string
+            }
+        ]
+        }
+        </code></pre>
+    </div>
+    <div class="item bas">
+        <h2>Memood-Api Category</h2>
+        <p>Attention ! Vous allez récupérer des données au format json.</p>
+        <a href="{{ app.request.server.get('PICTURE_URL') }}category/humour">{{ app.request.server.get('PICTURE_URL') }}category/{category}</a>
+        <pre><code class="lang-json">
+        {
+        <span class="hljs-string">"error"</span>:<span class="hljs-literal">null</span> || string,
+        <span class="hljs-string">"message"</span>:<span class="hljs-literal">null</span> || string,
+        <span class="hljs-string">"meme"</span>:[
+            {
+                <span class="hljs-string">"name"</span>: string,
+                <span class="hljs-string">"slug"</span>: string,
+                <span class="hljs-string">"history"</span>: timestamp
+                <span class="hljs-string">"picture"</span>: string
+            }
+        ]
+        }
+        </code></pre>
+    </div>
+       
+    </div>
+</div>
+{% endblock %}
